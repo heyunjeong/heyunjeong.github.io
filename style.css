@@ -1,0 +1,209 @@
+/*main page*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body a {
+ text-decoration: none;
+ color: #5d91cc;
+}
+
+#nav {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 2.5%;
+}
+
+#nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+}
+
+#nav li {
+  float: left;
+  display: table-cell;
+  text-align: center;
+  margin: 0px;
+  padding: 10px 20px;
+}
+
+#nav li a {
+  text-decoration: none;
+  float: left;
+  color: #5d91cc;
+  background-color: none;
+  font-size: 16px;
+}
+
+#nav li a:hover {
+  color: white;
+  background-color: #5d91cc;
+}
+
+#description {
+  font-size: 18px;
+  width: 65%;
+  margin: auto;
+  line-height: 150%;
+  padding-top: 50px;
+}
+
+#description a:hover {
+  color: white;
+  background-color: #5d91cc;
+}
+
+.pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  float: right;
+  shape-outside:circle();
+  margin-left: 50px;
+}
+
+#links{
+  clear: left;
+  width: 25%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  padding: 0px 5px;
+}
+
+/*design page*/
+#designnav li{
+    list-style-type: none;
+}
+
+#designnav li a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+#designnav li a:hover {
+  color: white;
+  background-color: #5d91cc;
+}
+
+#page1 {
+  width: 90%;
+  margin:auto;
+}
+
+#page1 img{
+  width: 32%;
+  height: auto;
+}
+
+#page1 img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+.content {
+  clear: left;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+
+#content img {
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+
+#page2 {
+  width: 90%;
+  margin:auto;
+}
+
+#page2 img{
+  width: 24%;
+  height: auto;
+}
+
+#page2 img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
+
+#page3vert {
+  width: 90%;
+  margin:auto;
+}
+
+#page3vert img{
+  width: 32%;
+  height: auto;
+}
+
+#page3vert img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
+
+#page3horiz {
+  width: 90%;
+  margin:auto;
+}
+
+#page3horiz img{
+  width: 32%;
+  height: auto;
+}
+
+#page3horiz img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
+
+#page4 {
+  width: 90%;
+  margin:auto;
+}
+
+#page4 img{
+  width: 32%;
+  height: auto;
+}
+
+#page4 img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
+
+/*writing page*/
+#excerpt{
+  width: 90%;
+  margin: auto;
+  padding-bottom: 4%;
+}
+
+#writingsection {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 8%;
+}
+
+#writingsection img{
+  width: 25%;
+  height: auto;
+  float: left;
+  padding-right: 25px;
+}
+
+</head>
