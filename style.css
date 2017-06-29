@@ -21,8 +21,8 @@ body a:hover {
 }
 
 #main {
-  line-height: 125%;
-  font-size: 12px;
+  line-height: 150%;
+  font-size: 1em;
   width: 77%;
   height: inherit;
   margin: auto;
