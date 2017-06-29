@@ -4,14 +4,24 @@ body {
 
 body a {
  text-decoration: none;
- color: black;
+ color: #5C91CD;
  cursor: pointer;
 }
 
 body a:hover {
   cursor: pointer;
+  font-weight: bold;
+}
+
+#nav a {
+ text-decoration: none;
+ color: black;
+ cursor: pointer;
+}
+
+#nav a:hover{
   border-bottom: solid 2px;
-  color: #5C91CD;
+  color: black;
 }
 
 /*index main page*/
@@ -306,5 +316,3 @@ body a:hover {
   float: left;
   padding-right: 25px;
 }
-
-</head>
