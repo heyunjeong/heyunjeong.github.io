@@ -1,23 +1,138 @@
-/*main page*/
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
 body a {
  text-decoration: none;
- color: #5d91cc;
+ color: black;
+ cursor: pointer;
+ border-bottom: solid 0.5px;
 }
 
+body a:hover {
+  cursor: pointer;
+  border-bottom: solid 2px;
+  color: #5C91CD;
+}
+
+/*index 2 main page 2017*/
+#main img {
+  width: 75px;
+  position: relative;
+}
+
+
+#main {
+  line-height: 175%;
+  font-size: 12px;
+}
+
+#panels {
+  width: 80%;
+  height: inherit;
+  margin: auto;
+  text-align: justify;
+  position: relative;
+}
+
+.design {
+  float: left;
+  width: 33%;
+  height: auto;
+  display: inline-block;
+}
+
+.design img{
+  margin: auto;
+  display: block;
+}
+
+.design-base {
+  width: 90%;
+  height: auto;
+}
+
+.design-base:hover {
+  opacity:0.75;
+  box-shadow: 10px 10px 10px -10px #333333;
+}
+
+.design p{
+  opacity: 0;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  transform: translateY(200%);
+  font-weight: 800;
+  letter-spacing: 10px;
+  color: white;
+  font-size: 175%;
+}
+
+.design-overlay {
+  width: 90%;
+  height: auto;
+  position: relative;
+  top: 0px;
+}
+
+.about-me {
+  margin: 0 auto;
+  width: 33%;
+  display: inline-block;
+}
+
+.about-me img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.about-me-base {
+  width: 90%;
+  height: auto;
+}
+
+.about-me-base:hover {
+  opacity:0.75;
+  box-shadow: 10px 10px 10px -10px #333333;
+}
+
+.writing {
+  position: absolute;
+  width: 33%;
+  display: inline-block;
+}
+
+.writing img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.writing-base {
+  width: 90%;
+  height: auto;
+}
+
+.writing-base:hover {
+  opacity:0.75;
+  box-shadow: 10px 10px 10px -10px #333333;
+}
+
+/*about me*/
 #nav {
   overflow: hidden;
   width: 100%;
-  margin-bottom: 2.5%;
+  margin-bottom: 2%;
 }
 
 #nav ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
 }
 
 #nav li {
@@ -26,19 +141,13 @@ body a {
   text-align: center;
   margin: 0px;
   padding: 10px 20px;
-}
-
-#nav li a {
-  text-decoration: none;
-  float: left;
-  color: #5d91cc;
-  background-color: none;
   font-size: 16px;
 }
 
 #nav li a:hover {
-  color: white;
-  background-color: #5d91cc;
+  cursor: pointer;
+  border-bottom: solid 2px;
+  color: #4F6367;
 }
 
 #description {
@@ -49,18 +158,18 @@ body a {
   padding-top: 50px;
 }
 
-#description a:hover {
-  color: white;
-  background-color: #5d91cc;
-}
-
 .pic {
-  width: 200px;
-  height: 200px;
+  width: 40%;
+  height: 40%;
   object-fit: cover;
   float: right;
   shape-outside:circle();
   margin-left: 50px;
+}
+
+.pic:hover{
+  -webkit-filter: drop-shadow(1px 1px 1px #333333);
+  filter: drop-shadow(1px 1px 1px #333333);
 }
 
 #links{
@@ -81,20 +190,18 @@ body a {
     list-style-type: none;
 }
 
-#designnav li a {
-  text-decoration: none;
-  color: black;
-  font-size: 12px;
+#designnav {
+  font-size: 14px;
 }
 
-#designnav li a:hover {
-  color: white;
-  background-color: #5d91cc;
+#designnav img{
+    width: 75px;
 }
 
 #page1 {
   width: 90%;
   margin:auto;
+  padding-top: 75px;
 }
 
 #page1 img{
@@ -107,10 +214,10 @@ body a {
 }
 
 .stretch {
-    width: 100%;
-    display: inline-block;
-    font-size: 0;
-    line-height: 0
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0
 }
 .content {
   clear: left;
@@ -129,10 +236,10 @@ body a {
   zoom: 1;
 }
 
-
 #page2 {
   width: 90%;
   margin:auto;
+  padding-top: 50px;
 }
 
 #page2 img{
@@ -147,6 +254,7 @@ body a {
 #page3vert {
   width: 90%;
   margin:auto;
+  padding-top: 50px;
 }
 
 #page3vert img{
@@ -169,20 +277,6 @@ body a {
 }
 
 #page3horiz img:hover{
-  box-shadow: 3px 3px 3px #888888;
-}
-
-#page4 {
-  width: 90%;
-  margin:auto;
-}
-
-#page4 img{
-  width: 32%;
-  height: auto;
-}
-
-#page4 img:hover{
   box-shadow: 3px 3px 3px #888888;
 }
 
