@@ -6,7 +6,6 @@ body a {
  text-decoration: none;
  color: black;
  cursor: pointer;
- border-bottom: solid 0.5px;
 }
 
 body a:hover {
@@ -15,16 +14,24 @@ body a:hover {
   color: #5C91CD;
 }
 
-/*index 2 main page 2017*/
+/*index main page*/
 #main img {
   width: 75px;
   position: relative;
 }
 
-
 #main {
-  line-height: 175%;
+  line-height: 125%;
   font-size: 12px;
+  width: 77%;
+  height: inherit;
+  margin: auto;
+}
+
+#main p{
+  font-weight: 900;
+  font-size: 4em;
+  color: #333333;
 }
 
 #panels {
