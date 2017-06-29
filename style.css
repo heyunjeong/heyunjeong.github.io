@@ -211,23 +211,39 @@ body a:hover {
   font-size: 14px;
 }
 
-#designnav img{
-    width: 75px;
-}
-
-#page1 {
+#portfolio {
   width: 90%;
   margin:auto;
-  padding-top: 75px;
+  padding-top: 2.5%;
 }
 
-#page1 img{
+#portfolio p{
+  border-bottom: 0.5px dashed black;
+  font-weight: bold;
+
+  letter-spacing: 2.5px;
+}
+
+#portfolio img{
+  width: 50%;
+  height: auto;
+  display: inline-block;
+}
+
+#infographics img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
+
+#flyers img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
+#logos {
+  display: inline-block;
+}
+
+#logos img{
   width: 32%;
   height: auto;
-}
-
-#page1 img:hover{
-  box-shadow: 3px 3px 3px #888888;
 }
 
 .stretch {
@@ -235,15 +251,6 @@ body a:hover {
   display: inline-block;
   font-size: 0;
   line-height: 0
-}
-.content {
-  clear: left;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify;
-  -ms-text-justify: distribute-all-lines;
-  text-justify: distribute-all-lines;
 }
 
 #content img {
