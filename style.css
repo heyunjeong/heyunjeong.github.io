@@ -36,6 +36,8 @@ body a:hover {
   width: 77%;
   height: inherit;
   margin: auto;
+  letter-spacing: 0.05em;
+
 }
 
 #main p{
