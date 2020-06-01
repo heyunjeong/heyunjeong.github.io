@@ -13,6 +13,17 @@ body a:hover {
   font-weight: bold;
 }
 
+h1 {
+  font-size: 3em;
+  display: inline;
+}
+
+
+h1:hover{
+  border-bottom: 0.25em solid #5c91cd;
+  display:block;
+}
+
 #nav a {
  text-decoration: none;
  color: black;
@@ -232,6 +243,11 @@ body a:hover {
   display: inline-block;
 }
 
+#infographics img{
+  width: 32%;
+  height: auto;
+}
+
 #infographics img:hover{
   box-shadow: 3px 3px 3px #888888;
 }
@@ -248,6 +264,9 @@ body a:hover {
   height: auto;
 }
 
+#logos img:hover{
+  box-shadow: 3px 3px 3px #888888;
+}
 .stretch {
   width: 100%;
   display: inline-block;
