@@ -15,13 +15,16 @@ body a:hover {
 
 h1 {
   font-size: 3em;
-  display: inline;
+  display: inline-block;
+  text-decoration: none;
 }
 
 
-h1:hover{
-  border-bottom: 0.25em solid #5c91cd;
-  display:block;
+h1:hover:after{
+    content: '';
+    display: block;
+    height: 0.5em;
+    background: #5c91cd;
 }
 
 #nav a {
@@ -48,6 +51,7 @@ h1:hover{
   height: inherit;
   margin: auto;
   letter-spacing: 0.05em;
+  padding-top:5%;
 
 }
 
