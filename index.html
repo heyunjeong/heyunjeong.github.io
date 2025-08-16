@@ -2,6 +2,9 @@
 <html>
 <title>Heyun Jeong</title>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
   <link rel="shortcut" href="/img/favicon.ico"/>
@@ -11,33 +14,126 @@
 </head>
 
 <body>
-    <div id="main">
-    <h1>HEYUN JEONG</h1><br><br>
-    <i>(pronounced hye-yoon jung)<br><br></i>
-      <i class="em em-pushpin"></i> Bay Area, California<br>
-      <i class="em em-computer"></i> Media & content strategy at <a href="https://www.bulleitgroup.com/" target="_blank">The Bulleit Group</a><br>
-      <i class="em em-mortar_board"></i> UC Berkeley '17<br><br>
-      <b>Let's connect!</b><br>
-      <a href="http://www.linkedin.com/in/heyunjeong" target="_blank">LinkedIn</a></li> |
-      <a href="http://www.twitter.com/heyunjeong" target="_blank">Twitter</a></li> |
-      <a href="mailto:heyun.jeong@gmail.com" target="_blank">Email</a></li>
-    </div>
+    <!-- Homepage Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>I'm <h1 style="color: #5C91CD;">Heyun.</h1>
+                <h2 class="hero-subtitle fade-in"><i>pronounced hey-yoon</i></h2>
+                <h3 class="hero-description fade-in">B2B tech storyteller & integrated marketer based in San Francisco.</h3>
+                <div class="scroll-indicator fade-in">
+                    <span>Scroll to see more!</span>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div id="panels">
-      <div class="design"><a href="design.html">
-        <div class="title"><b>DESIGN</b></div>
-        <img class="design-base" src="img/website_design.png">
-      </div></a>
+    <!-- Accomplishments Section -->
+    <section id="accomplishments" class="accomplishments-section">
+        <div class="container">
+            <h2 class="section-title fade-in">What I've done...</h2>
+            
+            <div class="accomplishments-grid">
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-summary">
+                        <h3>Built the influencer marketing program at Juniper Networks from pilot to strategic GTM channel.</h3>
+                        <button class="toggle-btn" data-target="accomplishment-1" aria-expanded="false" aria-label="Toggle details">
+                          <span class="toggle-icon">+</span>
+                      </button>
+                  </div>
+                    <div class="accomplishment-details" id="accomplishment-1">
+                        <p>placeholder</p>
+                    </div>
+                </div>
 
-      <div class="about-me"><a href="about.html">
-        <div class="title"><b>ABOUT ME</b></div>
-        <img class="about-me-base" src="img/website_about-me.png">
-      </div></a>
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-summary">
+                        <h3>Worked with execs on thought leadership and visibility via ghostwriting bylines and LinkedIn posts.</h3>
+                        <button class="toggle-btn" data-target="accomplishment-2" aria-expanded="false" aria-label="Toggle details">
+                          <span class="toggle-icon">+</span>
+                      </button>
+                  </div>
+                  <div class="accomplishment-details" id="accomplishment-2">
+                      <p>Created a strategic content calendar featuring weekly insights, industry analysis, and forward-thinking perspectives. Collaborated with industry publications and managed social media amplification strategies. The series gained 50K+ views and established the CEO as a go-to voice for enterprise technology trends.</p>
+                  </div>
+              </div>
 
-      <div class="writing"><a href="writing.html">
-        <div class="title"><b>WRITING</b></div>
-        <img class="writing-base" src="img/website_writing.png">
-      </div></a>
-  </div>
+              <div class="accomplishment-item fade-in">
+                  <div class="accomplishment-summary">
+                        <h3>Gone back to school for my MBA at UC Berkeley (go bears <3).</h3>
+                        <button class="toggle-btn" data-target="accomplishment-3" aria-expanded="false" aria-label="Toggle details">
+                          <span class="toggle-icon">+</span>
+                      </button>
+                  </div>
+                  <div class="accomplishment-details" id="accomplishment-3">
+                      <p>Meeting cool people, getting better at Excel, and using the student discount everywhere I can.</p>
+                    </div>
+                </div>
+
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-summary">
+                        <h3>Vibe-coded this website using Manus AI and AI agents with Microsoft Copilot.</h3>
+                        <button class="toggle-btn" data-target="accomplishment-4" aria-expanded="false" aria-label="Toggle details">
+                          <span class="toggle-icon">+</span>
+                      </button>
+                  </div>
+                  <div class="accomplishment-details" id="accomplishment-4">
+                      <p>Please don't hack this website.</p>
+                    </div>
+                </div>
+
+                <div class="accomplishment-item fade-in">
+                  <div class="accomplishment-summary">
+                      <h3>Redesigned customer onboarding experience, reducing time-to-value by 40% and improving retention rates.</h3>
+                      <button class="toggle-btn" data-target="accomplishment-5" aria-expanded="false" aria-label="Toggle details">
+                          <span class="toggle-icon">+</span>
+                      </button>
+                  </div>
+                  <div class="accomplishment-details" id="accomplishment-5">
+                      <p>Conducted extensive user research and journey mapping to identify friction points in the customer experience. Collaborated with UX designers and product managers to create streamlined workflows, interactive tutorials, and personalized success paths. The new onboarding process significantly improved customer satisfaction scores and reduced churn by 30%.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Social Links Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+          <h2 class="section-title fade-in">Let's Connect</h2>
+          <div class="social-links fade-in">
+              <a href="https://linkedin.com/in/heyunjeong" class="social-link linkedin" target="_blank" rel="noopener noreferrer">
+                  <div class="social-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                  </div>
+                  <span>LinkedIn</span>
+              </a>
+              
+              <a href="https://twitter.com/heyunjeong" class="social-link twitter" target="_blank" rel="noopener noreferrer">
+                  <div class="social-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                      </svg>
+                  </div>
+                  <span>Twitter</span>
+              </a>
+              
+              <a href="mailto:heyun@example.com" class="social-link email">
+                  <div class="social-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-.904.732-1.636 1.636-1.636h.91L12 11.367l9.455-7.546h.909c.904 0 1.636.732 1.636 1.636z"/>
+                      </svg>
+                  </div>
+                  <span>Email</span>
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
