@@ -27,7 +27,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.5;
     margin-bottom: 1rem;
 }
 
@@ -90,13 +90,14 @@ p {
     font-size: 3.5rem;
     font-weight: 700;
     color: #5C91CD;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     animation-delay: 0.2s;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-style: italic;
+    font-weight: 200;
     color: #353B3C;
     margin-bottom: 1.5rem;
     animation-delay: 0.4s;
@@ -124,6 +125,7 @@ p {
     margin-top: 0.5rem;
     animation: bounce 2s infinite;
 }
+
 
 /* Accomplishments Section */
 .accomplishments-section {
@@ -169,7 +171,7 @@ p {
 
 .accomplishment-summary h3 {
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #353B3C;
     flex: 1;
     margin-bottom: 0;
@@ -196,8 +198,8 @@ p {
 
 .toggle-btn:hover {
     background: #EEF0F2;
-    border-color: #5C91CD;
-    color: #5C91CD;
+    border-color: #499F68;
+    color: #499F68;
     transform: scale(1.05);
 }
 
@@ -250,16 +252,17 @@ p {
 }
 
 .contact-section .section-title {
-    color: #353B3C;
-    margin-bottom: 3rem;
-    font-weight: 300;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #5C91CD;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -268,11 +271,11 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    padding: 1.5rem;
+    padding: 1.2rem;
     text-decoration: none;
     color: #353B3C;
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-weight: 300;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     border-radius: 8px;
     min-width: 80px;
@@ -411,7 +414,7 @@ p {
 /* Focus styles for accessibility */
 .toggle-btn:focus,
 .social-link:focus {
-    outline: 2px solid #DB504A;
+    outline: 0px solid #499F68;
     outline-offset: 2px;
 }
 
@@ -427,4 +430,3 @@ p {
         margin-top: 1rem !important;
     }
 }
-
