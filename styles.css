@@ -26,6 +26,11 @@ a {
     text-decoration: none;
 }
 
+b, strong {
+    color: #5C91CD;
+    font-weight: 600;
+}
+
 ul {
     list-style: none;
 }
@@ -456,12 +461,21 @@ section {
 }
 
 .social-embed-slot {
+    height: 480px;
     overflow: hidden;
     min-width: 0;
+    border: 0.5px solid rgba(53, 59, 60, 0.15);
 }
 
-/* Override platform min-width defaults */
-.social-embed-slot .tiktok-embed,
+/* TikTok direct iframe */
+.social-embed-slot iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Instagram blockquote — constrain to slot */
 .social-embed-slot .instagram-media {
     min-width: 0 !important;
     max-width: 100% !important;
