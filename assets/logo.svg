@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Heyun Jeong">
+  <defs><mask id="k"><rect width="160" height="160" fill="#fff"/>
+    <text x="80" y="107" text-anchor="middle" font-family="'Open Sans',sans-serif"
+          font-weight="800" font-size="96" letter-spacing="-4" fill="#000">hj</text>
+  </mask></defs>
+  <circle cx="80" cy="80" r="74" fill="#3A6FB0" mask="url(#k)"/>
+</svg>

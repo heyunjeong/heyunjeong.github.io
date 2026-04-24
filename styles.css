@@ -1,3 +1,16 @@
+:root {
+    --ink:        #2A3033;
+    --ink-70:     rgba(42, 48, 51, 0.72);
+    --ink-50:     rgba(42, 48, 51, 0.5);
+    --ink-30:     rgba(42, 48, 51, 0.28);
+    --ink-15:     rgba(42, 48, 51, 0.15);
+    --paper:      #EDEDE7;
+    --paper-alt:  #F4F3EE;
+    --signal:     #3A6FB0;
+    --signal-ink: #244870;
+    --clay:       #9B4A3C;
+}
+
 /* ============================================================
    RESET & BASE
    ============================================================ */
@@ -16,8 +29,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.65;
-    color: #353B3C;
-    background-color: #EEF0F2;
+    color: var(--ink);
+    background-color: var(--paper);
     overflow-x: hidden;
 }
 
@@ -27,7 +40,7 @@ a {
 }
 
 b, strong {
-    color: #5C91CD;
+    color: var(--signal);
     font-weight: 600;
 }
 
@@ -80,8 +93,8 @@ section {
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: #EEF0F2;
-    border-bottom: 0.5px solid rgba(53, 59, 60, 0.3);
+    background-color: var(--paper);
+    border-bottom: 0.5px solid var(--ink-30);
 }
 
 .nav-inner {
@@ -95,10 +108,22 @@ section {
 }
 
 .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     font-family: 'Source Code Pro', 'Courier New', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    color: #353B3C;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.nav-mark {
+    width: 22px;
+    height: 22px;
+    display: block;
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -111,13 +136,13 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.08em;
-    color: #353B3C;
+    color: var(--ink);
     transition: color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #5C91CD;
+    color: var(--signal);
 }
 
 .nav-toggle {
@@ -134,7 +159,7 @@ section {
     display: block;
     width: 22px;
     height: 0.5px;
-    background-color: #353B3C;
+    background-color: var(--ink);
     transition: all 0.25s ease;
 }
 
@@ -146,22 +171,24 @@ section {
     display: flex;
     align-items: center;
     padding: 120px 0 80px;
-    border-bottom: 0.5px solid rgba(53, 59, 60, 0.2);
+    border-bottom: 0.5px solid var(--ink-15);
 }
 
 .eyebrow {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.16em;
-    color: #5C91CD;
+    color: var(--signal);
     margin-bottom: 1.75rem;
     display: block;
 }
 
 .hero-headline {
     font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    font-weight: 300;
+    letter-spacing: -0.01em;
     line-height: 1.15;
-    color: #353B3C;
+    color: var(--ink);
     max-width: 680px;
     margin-bottom: 2.25rem;
 }
@@ -180,7 +207,7 @@ section {
 .hero-body p {
     font-size: 1rem;
     line-height: 1.8;
-    color: rgba(53, 59, 60, 0.85);
+    color: var(--ink-70);
 }
 
 .meta-tags {
@@ -194,15 +221,15 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.72rem;
     letter-spacing: 0.1em;
-    color: #353B3C;
-    border: 0.5px solid rgba(53, 59, 60, 0.4);
+    color: var(--ink);
+    border: 0.5px solid var(--ink-50);
     padding: 0.3rem 0.7rem;
 }
 
 .email-cta {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.88rem;
-    color: #5C91CD;
+    color: var(--signal);
     text-decoration: underline;
     text-underline-offset: 4px;
     display: inline-block;
@@ -210,7 +237,7 @@ section {
 }
 
 .email-cta:hover {
-    color: #3a74b5;
+    color: var(--signal-ink);
 }
 
 /* ============================================================
@@ -218,11 +245,11 @@ section {
    ============================================================ */
 .section-work {
     padding: 6rem 0 5rem;
-    border-bottom: 0.5px solid rgba(53, 59, 60, 0.2);
+    border-bottom: 0.5px solid var(--ink-15);
 }
 
 .section-header {
-    border-top: 0.5px solid rgba(53, 59, 60, 0.2);
+    border-top: 0.5px solid var(--ink-15);
     padding-top: 1.5rem;
     margin-bottom: 3rem;
 }
@@ -231,11 +258,11 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.72rem;
     letter-spacing: 0.16em;
-    color: #353B3C;
+    color: var(--ink);
 }
 
 .section-label-light {
-    color: rgba(238, 240, 242, 0.45);
+    color: var(--ink-30);
 }
 
 /* --- Lead case study --- */
@@ -245,14 +272,14 @@ section {
     gap: 4rem;
     margin-bottom: 4rem;
     padding-bottom: 4rem;
-    border-bottom: 0.5px solid rgba(53, 59, 60, 0.2);
+    border-bottom: 0.5px solid var(--ink-15);
 }
 
 .case-tag {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.72rem;
     letter-spacing: 0.1em;
-    color: #5C91CD;
+    color: var(--signal);
     margin-bottom: 1rem;
     display: block;
 }
@@ -268,7 +295,7 @@ section {
     font-size: 0.92rem;
     font-style: normal;
     line-height: 1.75;
-    color: rgba(53, 59, 60, 0.7);
+    color: var(--ink-70);
     margin-bottom: 2rem;
 }
 
@@ -286,7 +313,7 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.14em;
-    color: rgba(53, 59, 60, 0.5);
+    color: var(--ink-50);
     display: block;
 }
 
@@ -301,12 +328,12 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 0;
     margin-bottom: 2.5rem;
-    border: 0.5px solid rgba(53, 59, 60, 0.2);
+    border: 0.5px solid var(--ink-15);
 }
 
 .stat {
     padding: 1.5rem;
-    border: 0.5px solid rgba(53, 59, 60, 0.2);
+    border: 0.5px solid var(--ink-15);
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -315,8 +342,8 @@ section {
 .stat-num {
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
-    font-weight: 400;
-    color: #353B3C;
+    font-weight: 300;
+    color: var(--ink);
     line-height: 1;
 }
 
@@ -324,7 +351,7 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.08em;
-    color: rgba(53, 59, 60, 0.5);
+    color: var(--ink-50);
 }
 
 /* Stats row (compact, for secondary cards) */
@@ -332,7 +359,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
-    border: 0.5px solid rgba(53, 59, 60, 0.2);
+    border: 0.5px solid var(--ink-15);
     margin-top: auto;
 }
 
@@ -346,7 +373,7 @@ section {
 
 /* Impact block */
 .impact-block {
-    border-left: 2px solid #5C91CD;
+    border-left: 2px solid var(--signal);
     padding-left: 1.25rem;
 }
 
@@ -355,7 +382,7 @@ section {
     font-size: 0.88rem;
     font-style: normal;
     line-height: 1.7;
-    color: rgba(53, 59, 60, 0.75);
+    color: var(--ink-70);
 }
 
 .impact-block em {
@@ -371,7 +398,7 @@ section {
 }
 
 .case-card {
-    border: 0.5px solid rgba(53, 59, 60, 0.2);
+    border: 0.5px solid var(--ink-15);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -392,9 +419,9 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.06em;
-    color: rgba(53, 59, 60, 0.5);
+    color: var(--ink-50);
     padding-top: 1rem;
-    border-top: 0.5px solid rgba(53, 59, 60, 0.15);
+    border-top: 0.5px solid var(--ink-15);
     margin-top: auto;
     line-height: 1.8;
 }
@@ -403,12 +430,12 @@ section {
 .writing-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 0.5px solid rgba(53, 59, 60, 0.2);
+    border: 0.5px solid var(--ink-15);
 }
 
 .writing-card {
     padding: 2rem;
-    border: 0.5px solid rgba(53, 59, 60, 0.2);
+    border: 0.5px solid var(--ink-15);
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
@@ -418,7 +445,7 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.72rem;
     letter-spacing: 0.16em;
-    color: #5C91CD;
+    color: var(--signal);
 }
 
 .writing-title {
@@ -426,14 +453,14 @@ section {
     font-size: 0.92rem;
     font-weight: 400;
     line-height: 1.45;
-    color: #353B3C;
+    color: var(--ink);
     text-decoration: underline;
     text-underline-offset: 3px;
     transition: color 0.2s ease;
 }
 
 .writing-title:hover {
-    color: #5C91CD;
+    color: var(--signal);
 }
 
 .writing-title-plain {
@@ -441,13 +468,13 @@ section {
     font-size: 0.92rem;
     font-weight: 400;
     line-height: 1.45;
-    color: #353B3C;
+    color: var(--ink);
 }
 
 .writing-role {
     font-size: 0.85rem;
     line-height: 1.7;
-    color: rgba(53, 59, 60, 0.65);
+    color: var(--ink-70);
 }
 
 /* ============================================================
@@ -464,7 +491,7 @@ section {
     height: 480px;
     overflow: hidden;
     min-width: 0;
-    border: 0.5px solid rgba(53, 59, 60, 0.15);
+    border: 0.5px solid var(--ink-15);
 }
 
 /* TikTok direct iframe */
@@ -492,7 +519,7 @@ section {
     height: 0;
     overflow: hidden;
     margin: 1.5rem 0 0;
-    border: 0.5px solid rgba(53, 59, 60, 0.2);
+    border: 0.5px solid var(--ink-15);
 }
 
 .embed-wrapper iframe {
@@ -510,14 +537,14 @@ section {
 
 /* Inline link style for case study body */
 .case-link {
-    color: #5C91CD;
+    color: var(--signal);
     text-decoration: underline;
     text-underline-offset: 3px;
     transition: color 0.2s ease;
 }
 
 .case-link:hover {
-    color: #3a74b5;
+    color: var(--signal-ink);
 }
 
 /* ============================================================
@@ -525,14 +552,14 @@ section {
    ============================================================ */
 .section-haas {
     padding: 4rem 0;
-    border-bottom: 0.5px solid rgba(53, 59, 60, 0.2);
+    border-bottom: 0.5px solid var(--ink-15);
 }
 
 .haas-coming {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
-    color: rgba(53, 59, 60, 0.35);
+    color: var(--ink-30);
     padding-bottom: 2rem;
 }
 
@@ -541,7 +568,7 @@ section {
    ============================================================ */
 .section-about-page {
     padding: calc(56px + 5rem) 0 7rem;
-    border-bottom: 0.5px solid rgba(53, 59, 60, 0.2);
+    border-bottom: 0.5px solid var(--ink-15);
 }
 
 .about-quote {
@@ -555,7 +582,7 @@ section {
     font-weight: 600;
     font-style: normal;
     line-height: 1.35;
-    color: #353B3C;
+    color: var(--ink);
 }
 
 .about-body {
@@ -563,7 +590,7 @@ section {
 }
 
 .about-body p {
-    color: rgba(53, 59, 60, 0.7);
+    color: var(--ink-70);
     font-size: 0.97rem;
     line-height: 1.8;
     margin-bottom: 1.25rem;
@@ -582,6 +609,8 @@ section {
 
 .contact-headline {
     font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+    font-weight: 300;
+    letter-spacing: -0.01em;
     line-height: 1.25;
     max-width: 560px;
     margin: 1.5rem 0 1rem;
@@ -590,7 +619,7 @@ section {
 .contact-body {
     font-size: 0.93rem;
     line-height: 1.75;
-    color: rgba(53, 59, 60, 0.65);
+    color: var(--ink-70);
     margin-bottom: 2.5rem;
     max-width: 480px;
 }
@@ -598,7 +627,7 @@ section {
 .email-cta-large {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 1.05rem;
-    color: #5C91CD;
+    color: var(--signal);
     text-decoration: underline;
     text-underline-offset: 4px;
     display: inline-block;
@@ -607,7 +636,7 @@ section {
 }
 
 .email-cta-large:hover {
-    color: #3a74b5;
+    color: var(--signal-ink);
 }
 
 .linkedin-link {
@@ -618,14 +647,27 @@ section {
     font-family: 'Source Code Pro', 'Courier New', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.06em;
-    color: rgba(53, 59, 60, 0.4);
+    color: var(--ink-50);
     transition: color 0.2s ease;
 }
 
 .linkedin-link a:hover {
-    color: #353B3C;
+    color: var(--ink);
 }
 
+
+/* ============================================================
+   SECTION NUMBERING
+   ============================================================ */
+.section-header::before {
+    content: attr(data-index);
+    display: block;
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    color: var(--ink-50);
+    margin-bottom: 0.5rem;
+}
 /* ============================================================
    RESPONSIVE — TABLET
    ============================================================ */
@@ -656,6 +698,11 @@ section {
         padding: 0 1.25rem;
     }
 
+    .nav-mark {
+        width: 20px;
+        height: 20px;
+    }
+
     /* Mobile nav */
     .nav-toggle {
         display: flex;
@@ -667,8 +714,8 @@ section {
         top: 56px;
         left: 0;
         right: 0;
-        background-color: #EEF0F2;
-        border-bottom: 0.5px solid rgba(53, 59, 60, 0.3);
+        background-color: var(--paper);
+        border-bottom: 0.5px solid var(--ink-30);
         flex-direction: column;
         align-items: flex-start;
         padding: 1.5rem 1.25rem;
@@ -729,6 +776,16 @@ section {
 }
 
 :focus-visible {
-    outline: 2px solid #5C91CD;
+    outline: 2px solid var(--signal);
     outline-offset: 3px;
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+@media print {
+    .nav, .nav-toggle, .embed-wrapper, .social-embeds { display: none; }
+    body { background: #fff; color: #000; }
+    a { color: #000; text-decoration: none; }
+    section { break-inside: avoid; }
 }
