@@ -601,6 +601,71 @@ section {
 }
 
 /* ============================================================
+   CONTENT DIET SECTION
+   ============================================================ */
+.section-diet {
+    padding: 5rem 0;
+    border-bottom: 0.5px solid var(--ink-15);
+}
+
+.diet-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 0.5px solid var(--ink-15);
+    border-left: 0.5px solid var(--ink-15);
+    max-width: 720px;
+}
+
+.diet-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 0.5px solid var(--ink-15);
+    border-right: 0.5px solid var(--ink-15);
+}
+
+.diet-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.diet-type {
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--signal);
+    display: block;
+}
+
+.diet-name {
+    font-size: 0.97rem;
+    color: var(--ink);
+    line-height: 1.4;
+}
+
+.diet-link {
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-size: 2rem;
+    color: var(--ink-30);
+    transition: color 0.2s ease;
+    text-decoration: none;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.diet-item:hover .diet-link {
+    color: var(--signal);
+}
+
+.diet-item:hover .diet-name {
+    color: var(--signal);
+}
+
+/* ============================================================
    CONTACT SECTION
    ============================================================ */
 .section-contact {
