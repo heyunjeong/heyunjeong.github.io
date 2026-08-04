@@ -1,0 +1,63 @@
+# =============================================================================
+# Auto-refresh the "Recently reading / Recently listening" block on
+# tinkering.html by pulling from Spotify + Goodreads once a month, summarizing
+# each with Claude Haiku, and committing the updated content-diet.json.
+#
+# ACTIVATION CHECKLIST (one-time setup):
+#   1. In this repo: Settings > Secrets and variables > Actions > New secret.
+#      Add all six of these:
+#        - ANTHROPIC_API_KEY        (get from https://console.anthropic.com)
+#        - SPOTIFY_CLIENT_ID        (Spotify developer app)
+#        - SPOTIFY_CLIENT_SECRET    (Spotify developer app)
+#        - SPOTIFY_REFRESH_TOKEN    (one-time OAuth flow — see script header)
+#        - GOODREADS_USER_ID        (numeric ID from your Goodreads profile URL)
+#        - GOODREADS_SHELF          (usually "currently-reading" or "read")
+#   2. In this repo: Settings > Actions > General > Workflow permissions.
+#      Set to "Read and write permissions" so the job can commit back.
+#   3. Trigger the first run manually from the Actions tab (workflow_dispatch)
+#      to confirm it works before the cron takes over.
+# =============================================================================
+
+name: Refresh content diet
+
+on:
+  schedule:
+    # 12:00 UTC on the 1st of every month
+    - cron: '0 12 1 * *'
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run refresh script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          GOODREADS_USER_ID: ${{ secrets.GOODREADS_USER_ID }}
+          GOODREADS_SHELF: ${{ secrets.GOODREADS_SHELF }}
+        run: node scripts/update-content-diet.js
+
+      - name: Commit updated JSON
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet content-diet.json; then
+            echo "No changes to content-diet.json — nothing to commit."
+          else
+            git add content-diet.json
+            git commit -m "chore: refresh content diet"
+            git push
+          fi

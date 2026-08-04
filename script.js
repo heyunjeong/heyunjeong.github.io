@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initNav();
     initScrollAnimations();
     initActiveNav();
+    initContentDiet();
 });
 
 // Mobile nav toggle
@@ -53,6 +54,42 @@ function initScrollAnimations() {
     document.querySelectorAll('.fade-in').forEach(function (el) {
         observer.observe(el);
     });
+}
+
+// Fetch and render the auto-refreshed content diet signal
+function initContentDiet() {
+    var container = document.getElementById('diet-signal');
+    if (!container) return;
+
+    fetch('/content-diet.json', { cache: 'no-cache' })
+        .then(function (res) {
+            if (!res.ok) throw new Error('content-diet.json fetch failed');
+            return res.json();
+        })
+        .then(function (data) {
+            if (data.reading) {
+                var readingEl = container.querySelector('[data-diet="reading"]');
+                if (readingEl) readingEl.textContent = data.reading;
+            }
+            if (data.listening) {
+                var listeningEl = container.querySelector('[data-diet="listening"]');
+                if (listeningEl) listeningEl.textContent = data.listening;
+            }
+            if (data.updated) {
+                var updatedEl = container.querySelector('[data-diet="updated"]');
+                if (updatedEl) updatedEl.textContent = formatDietDate(data.updated);
+            }
+        })
+        .catch(function () {
+            // Silently hide the block if fetch fails so the page still reads clean
+            container.style.display = 'none';
+        });
+}
+
+function formatDietDate(iso) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return iso;
+    return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
 // Highlight active nav link based on scroll position
