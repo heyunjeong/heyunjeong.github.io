@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Owner opt-out: visit any page with ?notrack=1 once per browser to stop GA counting your own visits; ?notrack=0 undoes it -->
+    <script>
+    (function(){try{var p=new URLSearchParams(location.search);
+    if(p.get('notrack')==='1'){localStorage.setItem('hj_notrack','1');}
+    if(p.get('notrack')==='0'){localStorage.removeItem('hj_notrack');}
+    if(localStorage.getItem('hj_notrack')==='1'){window['ga-disable-G-QM3QNM9EJ1']=true;}
+    }catch(e){}})();
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
